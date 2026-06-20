@@ -1,0 +1,150 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0B0B0B;
+    color: #E6E6E6;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* TEXTURE BACKGROUND */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(58, 141, 255, 0.35);
+}
+
+.tagline {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #A8A8A8;
+}
+
+.accent-line {
+    width: 120px;
+    height: 3px;
+    background: linear-gradient(90deg, #3A8DFF, #2ECC71);
+    margin: 20px auto 0;
+    border-radius: 3px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 120px 12%;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    border-left: 4px solid #3A8DFF;
+    padding-left: 12px;
+}
+
+.section-text {
+    max-width: 800px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #CFCFCF;
+}
+
+/* PROJECTS */
+.projects-grid {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: #3A8DFF;
+    box-shadow: 0 0 20px rgba(58, 141, 255, 0.25);
+}
+
+.project-thumb {
+    height: 150px;
+    background: #111;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.blue {
+    background: rgba(58, 141, 255, 0.2);
+    color: #3A8DFF;
+}
+
+.emerald {
+    background: rgba(46, 204, 113, 0.2);
+    color: #2ECC71;
+}
+
+/* CONTACT */
+.contact-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    border-radius: 8px;
+    background: #3A8DFF;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #2ECC71;
+}
+
+/* ANIMATIONS */
+.fade {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
